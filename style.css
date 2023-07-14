@@ -1,0 +1,31 @@
+.navbar {
+  background-color: #7851a9;
+  font-family: "Kanit", sans-serif;
+}
+.navbar-brand {
+  font-size: 29px;
+  font-weight: 800;
+}
+.navbar-brand img {
+  margin-right: -20px;
+}
+.jumbotron {
+  background-color: #e6e6fa;
+  padding-top: 2.5rem;
+}
+section img {
+  width: 250px;
+}
+#projects {
+  background-color: #e6e6fa;
+}
+.btn {
+  background-color: blueviolet;
+  color: white;
+}
+section {
+  padding-top: 7rem;
+}
+footer {
+  background-color: #7851a9;
+}
