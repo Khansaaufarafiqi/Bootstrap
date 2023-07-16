@@ -165,6 +165,11 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-6">
+            <div class="alert alert-dismissible fade show text-center px-5 d-none my-alert" role="alert" style="background-color: #34c759">
+              <i class="bi bi-check-circle-fill"></i>
+              <strong>Thank You</strong> already sent...
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
             <form name="kir4-contack-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
@@ -178,7 +183,11 @@
                 <label for="exampleFormControlTextarea1" class="form-label">Saran</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="saran"></textarea>
               </div>
-              <button type="submit" class="btn text-light">Kirim</button>
+              <button type="submit" class="btn text-light btn-kirim">Kirim</button>
+              <button class="btn d-none btn-loading" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -203,11 +212,26 @@
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbwM8CvYORAj3-Oawikwx-LM6fLVbB8NJayATu_T-Ct3qAyIyvf7-2G0QJyGEGxSQOdo/exec";
       const form = document.forms["kir4-contack-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const btnAlert = document.querySelector(".my-alert");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+        // tampilkan tombol loading,hilangkan tombol kirim
+        btnKirim.classList.toggle("d-none");
+        btnLoading.classList.toggle("d-none");
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
+          .then((response) => {
+            // tampilkan tombol kirim,hilangkan tombol loading
+            btnKirim.classList.toggle("d-none");
+            btnLoading.classList.toggle("d-none");
+            // menampilkan alert
+            btnAlert.classList.toggle("d-none");
+            console.log("Success!", response);
+            // reset semua tulisan yang ada pada form
+            form.reset();
+          })
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
