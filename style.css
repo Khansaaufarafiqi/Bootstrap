@@ -29,3 +29,9 @@ section {
 footer {
   background-color: #7851a9;
 }
+.img-gallery {
+  width: 100%;
+}
+#gallery .row > * {
+  padding: 0;
+}
