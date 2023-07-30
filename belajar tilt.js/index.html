@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tilt.js</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Bagian ini akan diubah menjadi tilt -->
+    <div class="box">
+      <h1>Press</h1>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelector(".box"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+  </body>
+</html>
