@@ -22,7 +22,7 @@
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-dark p-3 shadow-sm sticky-top">
       <div class="container-fluid ms-4">
-        <a class="navbar-brand navbaratas" href="#"> <img src="img/gg.png" alt="Logo" width="77" height="48" class="d-inline-block align-text-top" />Raiden Shogun </a>
+        <a class="navbar-brand navbaratas" href="#"><img src="img/gg.png" alt="Logo" width="77" height="48" class="d-inline-block align-text-top" />Raiden Shogun </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -149,6 +149,38 @@
           </div>
         </div>
       </div>
+      <section id="myHero">
+        <div class="container">
+          <div class="row text-center m-4 fw-bold">
+            <div class="col">
+              <h1>MYHero</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="hero-box">
+                <h3 class="hero-name">My Hero</h3>
+                <img src="img/forTilt/image-removebg-preview.png" alt="keqing" class="img-keqing" />
+                <a href="#" class="btn btn-edit">Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="hero-box">
+                <h3 class="hero-name">My Hero</h3>
+                <img src="img/forTilt/raiden.png" alt="keqing" class="img-raiden" />
+                <a href="#" class="btn btn-edit">Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="hero-box">
+                <h3 class="hero-name">My Hero</h3>
+                <img src="img/forTilt/lisa.png" alt="keqing" class="img-lisa" />
+                <a href="#" class="btn btn-edit">Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -167,34 +199,34 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Albedo McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Childe McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/download (1).jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Kujou McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Lumine McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Raiden McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Venti McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Yae Miko McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Yanfei McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tes">
             <a href=""><img src="img/gallery/Albedo McDonald's.jpeg" alt="albedo" class="img-fluid img-gallery" /></a>
           </div>
         </div>
@@ -280,6 +312,7 @@
       gsap.from(".gambarawal", { duration: 0.5, y: -100, opacity: 0 });
       gsap.from(".judulRS", { duration: 1, x: 100, opacity: 0, delay: 0.5 });
       gsap.from(".judul2", { duration: 1, x: -100, opacity: 0, delay: 0.5 });
+      gsap.from(".navbaratas", { duration: 1, x: -100, opacity: 0, delay: 0.5, ease: "back" });
     </script>
 
     <script>
@@ -306,6 +339,21 @@
             form.reset();
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <script type="text/javascript" src="JS/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".hero-box"), {
+        max: 35,
+        speed: 400,
+        glare: true,
+      });
+    </script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".tes"), {
+        max: 35,
+        speed: 400,
+        glare: true,
       });
     </script>
   </body>
