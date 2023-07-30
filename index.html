@@ -22,7 +22,7 @@
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-dark p-3 shadow-sm sticky-top">
       <div class="container-fluid ms-4">
-        <a class="navbar-brand navbaratas" href="#"> <img src="img/gg.png" alt="Logo" width="77" height="48" class="d-inline-block align-text-top" />Raiden Shogun </a>
+        <a class="navbar-brand navbaratas" href="#"><img src="img/gg.png" alt="Logo" width="77" height="48" class="d-inline-block align-text-top" />Raiden Shogun </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -280,6 +280,7 @@
       gsap.from(".gambarawal", { duration: 0.5, y: -100, opacity: 0 });
       gsap.from(".judulRS", { duration: 1, x: 100, opacity: 0, delay: 0.5 });
       gsap.from(".judul2", { duration: 1, x: -100, opacity: 0, delay: 0.5 });
+      gsap.from(".navbaratas", { duration: 1, x: -100, opacity: 0, delay: 0.5, ease: "back" });
     </script>
 
     <script>
